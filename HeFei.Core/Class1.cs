@@ -8,5 +8,6 @@ namespace HeFei.Core
 {
     public class Class1
     {
+        //注释
     }
 }

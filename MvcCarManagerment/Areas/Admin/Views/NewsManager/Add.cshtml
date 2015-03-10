@@ -1,0 +1,52 @@
+﻿@model MvcCarManagerment.Models.ManagerModel
+@using MvcCarManagerment.Service
+@{
+    ViewBag.Title = "后台信息发布";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>添加新闻</h2>
+
+@using (Html.BeginForm("Add", "NewsManager", FormMethod.Post, new { enctype = "multipart/form-data"}))
+{  
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(entity => entity.ID)
+    <table>
+        <tr>
+            <td width="15%" valign="middle">文章标题 <span style="color: Red; margin: 0,0,-10px,0;">*</span>
+            </td>
+            <td>
+                @Html.TextBoxFor(entity => entity.Title, new { @class= "acticle_header" })
+                @Html.ValidationMessageFor(entity => entity.Title)
+            </td>
+        </tr>
+    </table>
+  
+    @Html.TextAreaFor(entity => entity.NewsComment)
+      
+        
+    <div class="btn_edit">
+        <input class="btn btn_edit_submit" type="submit" value="保存" id="save" />
+        @Html.ActionLink("返回", "Index")
+    </div>
+}
+@section scripts{
+    @Scripts.Render("~/Areas/Admin/Scripts/ueditor/ueditor.all.js")
+    @Scripts.Render("~/Areas/Admin/Scripts/ueditor/ueditor.all.min.js")
+    @Scripts.Render("~/Areas/Admin/Scripts/ueditor/ueditor.config.js")
+    @Styles.Render("~/Areas/Admin/Scripts/ueditor/themes/iframe.css")
+    <script type="text/javascript">
+
+        $(function () {
+            var editor = new baidu.editor.ui.Editor({
+                UEDITOR_HOME_URL: '/Areas/Admin/Scripts/ueditor/', //配置编辑器路径
+                iframeCssUrl: '/Areas/Admin/Scripts/ueditor/themes/iframe.css', //样式路径
+                initialContent: '', //初始化编辑器内容
+                autoHeightEnabled: false, //高度自动增长
+                minFrameHeight: 500, //最小高度
+                initialFrameHeight: 380//初始化编辑器高度
+            });
+            editor.render('NewsComment');
+        });
+
+    </script>
+}

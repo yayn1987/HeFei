@@ -1,0 +1,49 @@
+﻿@*@model IEnumerable<MvcCarManagerment.Areas.Admin.Models.ServerListModel>*@
+@model MvcCarManagerment.Areas.Admin.Models.ServerListListViewModel
+@{
+    ViewBag.Title = "IndexList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style type="text/css">
+    th
+    {
+        text-align: center;
+    }
+</style>
+<h2 class="page-title">
+    高端汽车服务列表</h2>
+<p>
+    @Html.ActionLink("增加服务类别", "CreateType")
+</p>
+<div class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    类 型 名 称
+                </th>
+                <th>
+                    操 作
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.ServiceListInfo)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.ListID)
+                    @Html.HiddenFor(modelItem => item.ParentID)
+                    @Html.DisplayFor(modelItem => item.ListName)
+                </td>
+                <td>
+                    @Html.ActionLink("编辑类型", "EditType", new { id = item.ListID }) |
+                    @Html.ActionLink("查看详细", "Details", new { id = item.ListID, parentid = item.ParentID })|
+                    @Html.ActionLink("删除类型", "DeleteType", new { id = item.ListID, parentid = item.ParentID }, new { onclick = "return confirm('请确认是否要删除这类型及该类型下的内容?');" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="pagination">
+    @Html.PageLinks(Model.NewsInfo, x => Url.Action("IndexList", new { page = x }))
+</div>

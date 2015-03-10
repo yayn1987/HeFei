@@ -1,0 +1,73 @@
+﻿@model MvcCarManagerment.Models.UserModel
+@{
+    ViewBag.Title = "修改密码";
+}
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <title>修改密码</title>
+    <meta name="author" content="Codrops" />
+    <link rel="stylesheet" type="text/css" href="../../css/demo.css" />
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../css/animate-custom.css" />
+    @Scripts.Render("~/Scripts/jquery.js")
+    <script type="text/javascript">
+        alert("11");
+    </script>
+</head>
+<style type="text/css">
+    .validation-summary-errors
+    {
+        font-weight: bold;
+        color: #ff0000;
+        font-size: 17px;
+    }
+    .field-validation-error
+    {
+        color: #ff0000;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+               
+				<nav class="codrops-demos">
+                 <h1>修改密码</h1>
+				</nav>
+            </header>
+        <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  method="post"  > 
+                             @Html.AntiForgeryToken()
+                             @Html.ValidationSummary(true)
+                                <h1>Register</h1> 
+                                <p> 
+                                    <label for="UserName" class="uname" data-icon="u" > 用户名 </label>
+                                      @Html.TextBoxFor(entity => entity.UserName, new { placeholder = "用户名" })
+                                      @Html.ValidationMessageFor(entity => entity.UserName)
+                                </p>
+                                <p> 
+                                    <label for="UserPwd" class="youpasswd" data-icon="p"> 新密码 </label>
+                                       @Html.PasswordFor(entity => entity.UserPwd, new { placeholder = "密码" })
+                                       @Html.ValidationMessageFor(entity => entity.UserPwd)
+                                </p>
+                                <p class="login button">
+                                       <input type="submit" value="修改"  />
+                                        <input type="submit" value="关闭" onclick="javascript:window.close()"  />
+								</p>
+                            
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+    </div>
+</body>
+</html>

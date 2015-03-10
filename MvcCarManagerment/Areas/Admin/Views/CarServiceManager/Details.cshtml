@@ -1,0 +1,49 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.News_ServiceInfoListViewModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2 class="page-title">
+    高端汽车服务</h2>
+<div class="btn-toolbar">
+    <button class="btn btn-primary" onclick="location.href='@Url.Action("Add", "CarServiceManager", new { id = @Html.ViewContext.RouteData.Values["id"] })'">
+        <i class="icon-plus"></i>添加汽车服务--@ViewData["type"]
+    </button>
+</div>
+<div class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    汽车服务标题
+                </th>
+                <th>
+                    发布日期
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.NewsServiceInfo)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TiTle)
+                    </td>
+                    <td>
+                        @item.Time.ToString("yyyy年MM月dd日")
+                    </td>
+                    <td>
+                        @Html.ActionLink("编辑", "Edit", new { ID = item.ID, tyleid = @Html.ViewContext.RouteData.Values["id"] })
+                        @Html.ActionLink("删除", "Delete", new { ID = item.ID, tyleid = @Html.ViewContext.RouteData.Values["id"] }, new { onclick = "return confirm('请确认是否要删除这篇新闻?');" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="btn_edit">
+    @Html.ActionLink("返回", "IndexList")
+</div>
+<div class="pagination">
+    @Html.PageLinks(Model.NewsInfo, x => Url.Action("Details", new { page = x }))
+</div>

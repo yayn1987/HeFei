@@ -1,0 +1,38 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.ImagesListViewModel
+@{
+    int image_num = 0;
+    var imagesList = Model.Images.ToList();
+}
+<table style="width: 100%; border: 1px; text-align: center;" cellspacing="0" cellpadding="0">
+    @for (int i = 0; i < 6; i++)
+    {
+        <tr>
+            @for (; image_num < imagesList.Count; image_num++)
+            {
+                var item = imagesList[image_num];
+                i++; if (i == 4) { break; }
+                <td>
+                    <table>
+                        <tr>
+                            <td align="left" valign="top">
+                                图像标题12121： 【@item.Title】
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">
+                                <img src= "@Url.Content(@item.ImagerUrl)" style="width:150px; height:100px; border:0px;" alt="@item.Title"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="top">
+                                @* @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |*@
+                                @Html.ActionLink("删除", "Delete", new { id = item.ID }, new { onclick = "return confirm('是否删除该图片');" })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            }
+        </tr>
+     
+    }
+</table>

@@ -1,0 +1,46 @@
+﻿@model MvcCarManagerment.Models.ImageModel
+@{
+    ViewBag.Title = "编辑图片";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>编辑图片</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.ID)
+    @Html.HiddenFor(model => model.ImagerUrl)
+    @Html.HiddenFor(model => model.ImageType)
+                                             
+    <table>
+        <tr>
+            <td align="left" valign="top">
+                图像标题：
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.Title)
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                图像链接：
+            </td>
+            <td>
+                @Html.TextBoxFor(model => model.LinkUrl)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="保存" class="btn btn_edit_submit" />
+            </td>
+            <td>
+                @Html.ActionLink("返回", "Index")
+            </td>
+        </tr>
+    </table>
+    <p>
+    </p>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

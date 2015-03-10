@@ -1,0 +1,53 @@
+﻿@model YuanChen.Model.News
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/news_title.png"/>
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index","Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                <a href="@Url.Action("Index","Wed")">服务范围</a>
+                <img src="~/Content/images/list_arrow.png" />
+                <a href="@Url.Action("Index","CarOrder")">车辆订购、按揭</a>
+            </div>
+        </div>
+        <div class="yc_news">
+            <div class="yc_news_left">
+                <div class="yc_carorder_right_title">
+                    @Html.ActionLink("车辆订购、按揭","Index")
+                </div>
+                <div class="yc_news_right_child">
+                    <div class="yc_carorder_right_1">
+                        <i class="i_selected">></i>@Html.ActionLink("车辆订购、按揭","Index")
+                    </div>
+                    <div class="yc_carorder_right_2">
+                        <i class="i_nomal">></i><a href="@Url.Action("Index","Pledge")">车辆抵押</a>
+                    </div>
+                    <div class="yc_carorder_right_2">
+                        <i class="i_nomal">></i><a href="@Url.Action("Index","HandCar")">二手车交易、评估</a>
+                    </div>
+                </div>
+            </div>
+            <div class="yc_news_right">
+                <div class="yc_detail_right_body">
+                    <div class="yc_detail_title">
+                        @Model.Title
+                    </div>
+                    <div class="yc_detail_time">
+                        @Model.Time
+                    </div>
+                    @Html.DisplayTextFor(t => t.NewsComment)
+                </div>
+            </div>
+            <div class="yc_about_clear">.</div>
+        </div>
+    </div>
+</div>

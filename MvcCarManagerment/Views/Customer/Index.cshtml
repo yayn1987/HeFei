@@ -1,0 +1,124 @@
+﻿@model MvcCarManagerment.Models.CustomerModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style type="text/css">
+    .title
+    {
+        text-align: center;
+        width: 20%;
+    }
+    .btn
+    {
+        width: 100px;
+        height: 40px;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    
+    <div class="yc_container">
+        <div class="yc_about_title">
+            @*<img src="@Url.Content("~/Content/images/con_title.png.png")" />*@
+            <img src="../../Content/images/con_title.png" />
+        </div>
+        <div class="yc_about_content">
+            <div class="yc_about_content_nav">
+                <div class="yc_about_content_home">
+                    <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                    <a href="@Url.Action("Index", "Home")">首页</a>
+                    <img src="~/Content/images/list_arrow.png" />
+                    @Html.ActionLink("客户服务", "Index")
+                </div>
+            </div>
+            <div class="yc_news">
+                <div class="yc_customer_right">
+                    <div class="yc_car_right_body">
+                        <table>
+                            <tr>
+                                <td colspan="2" class="title" style="font-size: 21px; font-weight: bold; padding-top: 30px">
+                                    欢迎通过在线留言联系我们，7x24小时为您服务！
+                                </td>
+                                <td rowspan="8">
+                                    <img src="@Url.Content("~/Content/images/customerright.png")" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="title" style="font-size: 14px;">
+                                    请务必填写完整，这样我们很快地了解你的需求并及时联系到您。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    @Html.LabelFor(model => model.SubJect)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.SubJect)
+                                    @Html.ValidationMessageFor(model => model.SubJect)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    @Html.LabelFor(model => model.Name)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Name)
+                                    @Html.ValidationMessageFor(model => model.Name)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    @Html.LabelFor(model => model.Email)
+                                </td>
+                                <td>
+                                    @Html.EditorFor(model => model.Email)
+                                    @Html.ValidationMessageFor(model => model.Email)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    @Html.LabelFor(model => model.Tel)
+                                </td>
+                                <td>
+                                    @Html.TextBoxFor(model => model.Tel)
+                                    @Html.ValidationMessageFor(model => model.Tel)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    @Html.LabelFor(model => model.Comment)
+                                </td>
+                                <td>
+                                    @Html.TextAreaFor(model => model.Comment, new { style = "height:70px;width:430px" })
+                                    @Html.ValidationMessageFor(model => model.Comment)
+                                    <font color="red">至多输入500个字符</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right" valign="top">
+                                    <input type="submit" value="确定" class="btn" style="padding:4px 14px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $(function () {
+            var msg = '@ViewData["msg"]';
+            if (msg != "") {
+                alert('@ViewData["msg"]');
+
+            }
+        });
+   
+    </script>
+}

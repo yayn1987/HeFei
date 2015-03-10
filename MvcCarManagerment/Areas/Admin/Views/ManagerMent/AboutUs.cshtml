@@ -1,0 +1,23 @@
+﻿@model MvcCarManagerment.Models.AboutUsModel
+@{
+    ViewBag.Title = "关于我们";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>
+    AboutUs</h2>
+<fieldset>
+    <legend>关于我们</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Coment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayTextFor(model => model.Coment)
+    </div>
+    <div id="prew">
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("编辑更新", "EditAboutUs", new { id = Model.ID }) |
+    @Html.ActionLink("返回主页", "Index")
+</p>
+

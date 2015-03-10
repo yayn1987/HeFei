@@ -1,0 +1,25 @@
+﻿
+ul li a.selected {
+    color: #005580;
+    background-color: #f5f5f5;
+}
+
+div.pagination {
+    float:right;
+}
+
+div.btn_edit {
+    margin-top: 10px;
+}
+
+input.btn_edit_submit {
+    margin-right:10px;
+}
+
+input.acticle_header {
+    width:500px;
+}
+
+span.first {
+    color:#fff;
+}

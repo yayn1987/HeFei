@@ -1,0 +1,50 @@
+﻿@model YuanChen.Model.News
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/news_title.png"/>
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index","Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("新闻动态","Index")
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("公司新闻","Index")
+            </div>
+        </div>
+        <div class="yc_news">
+            <div class="yc_news_left">
+                <div class="yc_news_right_title">
+                    @Html.ActionLink("新闻动态","Index")
+                </div>
+                <div class="yc_news_right_child">
+                    <div class="yc_news_right_1">
+                        <i class="i_selected">></i>@Html.ActionLink("公司新闻","Index")
+                    </div>
+                    <div class="yc_news_right_2">
+                        <i class="i_nomal">></i><a href="@Url.Action("Index","Offer")">优惠活动</a>
+                    </div>
+                </div>
+            </div>
+            <div class="yc_news_right">
+                <div class="yc_detail_right_body">
+                    <div class="yc_detail_title">
+                        @Model.Title
+                    </div>
+                    <div class="yc_detail_time">
+                        @Model.Time
+                    </div>
+                    @Html.DisplayTextFor(t => t.NewsComment)
+                </div>
+            </div>
+            <div class="yc_about_clear">.</div>
+        </div>
+    </div>
+</div>

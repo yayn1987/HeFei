@@ -1,0 +1,85 @@
+﻿@model MvcCarManagerment.Models.CustomerModel
+@{
+    ViewBag.Title = "客户服务";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style type="text/css">
+    .table_custom
+    {
+        border: 1px solid #666;
+        text-align: center;
+    }
+
+    td {
+        border:1px solid #666;
+        padding:3px;
+    }
+    .title
+    {
+        width: 100px;
+        font-weight: bold;
+    }
+    
+    .leirong
+    {
+        width: 180px;
+    }
+    div.back_to_list {
+        margin-top:10px;
+    }
+</style>
+<h2>
+    客户服务</h2>
+<div>
+    <table class="table_custom">
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.SubJect)
+            </td>
+            <td class="leirong">
+                @Html.DisplayFor(model => model.SubJect)
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.Name)
+            </td>
+            <td class="leirong">
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.Tel)
+            </td>
+            <td class="leirong">
+                @Html.DisplayFor(model => model.Tel)
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.Email)
+            </td>
+            <td class="leirong">
+                @Html.DisplayFor(model => model.Email)
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Comment)
+            </td>
+        </tr>
+        <tr>
+            <td class="title">
+                @Html.DisplayNameFor(model => model.FormatTime)
+            </td>
+            <td class="leirong">
+                @Html.DisplayFor(model => model.FormatTime)
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="back_to_list">@Html.ActionLink("返回", "Index")</div>

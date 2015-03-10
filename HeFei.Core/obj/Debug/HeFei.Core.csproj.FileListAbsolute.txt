@@ -1,5 +1,0 @@
-G:\ProviteProject\HeFei\HeFei.Core\bin\Debug\HeFei.Core.dll
-G:\ProviteProject\HeFei\HeFei.Core\bin\Debug\HeFei.Core.pdb
-G:\ProviteProject\HeFei\HeFei.Core\obj\Debug\HeFei.Core.csprojResolveAssemblyReference.cache
-G:\ProviteProject\HeFei\HeFei.Core\obj\Debug\HeFei.Core.dll
-G:\ProviteProject\HeFei\HeFei.Core\obj\Debug\HeFei.Core.pdb

@@ -1,0 +1,7 @@
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\bin\Release\YuanChen.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\bin\Release\COM.Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\bin\Release\Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\bin\Release\OpenSmtp.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\bin\Release\OWC10Chart.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Common\obj\Release\YuanChen.Common.dll

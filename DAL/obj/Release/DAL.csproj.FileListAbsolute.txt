@@ -1,0 +1,12 @@
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\YuanChen.DAL.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\MySql.Data.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\YuanChen.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\YuanChen.DBUtility.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\YuanChen.Model.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\OpenSmtp.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\COM.Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\IBatisNet.DataMapper.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\bin\Release\IBatisNet.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DAL\obj\Release\YuanChen.DAL.dll

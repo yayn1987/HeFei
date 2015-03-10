@@ -1,0 +1,74 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.ImagesListViewModel
+@{
+    ViewBag.Title = "图片管理列表";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    int image_num = 0;
+    var imagesList = Model.Images.ToList();
+}
+<h2>
+    广告图片管理列表</h2>
+<p>
+    @Html.ActionLink("增加图片", "AddImageManager", new { type = "2" })
+</p>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#image-viewead" data-toggle="tab">广告位图片</a></li>
+</ul>
+<div class="tab-content">
+    <div id="image-viewead" class=" tab-pane active">
+        <table style="width: 100%; border: 1px; text-align: center;" cellspacing="0" cellpadding="0">
+            @for (int i = 0; i < 6; i++)
+            {
+                <tr>
+                    @for (; image_num < imagesList.Count; image_num++)
+                    {
+                        var item = imagesList[image_num];
+                        i++; if (i == 4) { break; }
+                        <td>
+                            <table>
+                                <tr>
+                                    <td align="left" valign="top">
+                                        图像标题： 【@item.Title】
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" valign="top">
+                                        <img src= "@Url.Content(@item.ImagerUrl)" style="width:200px; height:135px; border:0px;" alt="@item.Title"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top">
+                                        @* @Html.ActionLink("编辑", "Edit", new { id = item.ID }) |*@
+                                        @Html.ActionLink("删除", "Delete", new { id = item.ID }, new { onclick = "return confirm('是否删除该图片');" })
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    }
+                </tr>
+     
+            }
+        </table>
+        <div class="pagination">
+            @Html.PageLinks(Model.NewsInfo, x => Url.Action("AdImageIndex", new { page = x }))
+        </div>
+    </div>
+</div>
+<script src="../../bundles/bootstrap-tab.js" type="text/javascript"></script>
+<script src="../../bundles/bootstrap-transition.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        var log = function (s) {
+            window.console && console.log(s)
+        }
+        $('.nav-tabs a:last').tab('show')
+        $('a[data-toggle="tab"]').on('show', function (e) {
+            log(e);
+            //            $(e.relatedTarget).removeClass("active");
+            //            $(e.target).addClass("active");
+        })
+        $('a[data-toggle="tab"]').on('shown', function (e) {
+            log(e.target) // activated tab
+            log(e.relatedTarget) // previous tab
+        })
+    })
+</script>

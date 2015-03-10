@@ -1,0 +1,77 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.NewsListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBusiness.cshtml";
+    var list = Model.News.ToList();
+}
+
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/title_b.png"/>
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index","Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                <a href="@Url.Action("Index","Wed")">服务范围</a>
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("高端商务礼仪","Index")
+            </div>
+        </div>
+        <div class="yc_news">
+            <div class="yc_news_left yc_wed_left">
+                <div class="yc_news_right_title">
+                    @Html.ActionLink("高端商务礼仪","Index")
+                </div>
+                <div class="yc_news_right_child">
+                    @foreach (var item in Model.News)
+                    {
+                        <div class="yc_news_right_2">
+                            <i class="i_nomal">></i><a href="@Url.Action("Detail", "Business", new { id = item.ID})">@item.Title</a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="yc_news_right yc_wed_right">
+                <div class="yc_news_right_body">
+                    <ul>
+                        @for (var i = 0; i < list.Count;i++)
+                        {
+                            <li>
+                                <div class="yc_wed_container">
+                                    <div class="yc_wed_body">
+                                        <div class="yc_wed_img">
+                                            <a href="@Url.Action("Detail", "Business", new { id = list[i].ID})">
+                                                <img src="@Url.Content(list[i].ImageUrl)" style="width:275px;height:190px;" />
+                                            </a>
+                                        </div>
+                                        <div class="yc_wed_content">
+                                            <div class="yc_wed_content_title">
+                                                @Html.ActionLink(list[i].Title, "Detail", new { id = list[i].ID, @class = "yc_wed_content_title" })
+                                                
+                                            </div>
+                                            <div class="yc_wed_content_body">
+                                                @Html.DisplayTextFor(entiy => list[i].NewsComment)
+                                            </div>
+                                            <div class="yc_wed_content_detail">
+                                                @Html.ActionLink(">> 点击查看套餐详细", "Detail", new { id = list[i].ID,@class="yc_wed_detail_link"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+
+                <div class="pagination">
+                    @Html.PageLinks(Model.NewsInfo, x => Url.Action("Index", new { page = x }))
+                </div>
+            </div>
+            <div class="yc_about_clear">.</div>
+        </div>
+    </div>
+</div>
+

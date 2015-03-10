@@ -1,0 +1,73 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.ServerListListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/carserver.png" />
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index", "Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("服务范围", "Index")
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("高端汽车服务", "Index")
+            </div>
+        </div>
+        <div class="yc_news">
+            <div class="yc_news_left yc_pledge_left">
+                <div class="yc_news_right_title">
+                    @Html.ActionLink("高端汽车服务", "Index")
+                </div>
+                <div class="yc_news_right_child">
+                    @foreach (var item in Model.ServiceListInfo)
+                    {
+                        <div class="yc_news_right_2">
+                            <i class="i_nomal">></i><a href="@Url.Action("CarServiceDetails", "CarService", new { id = item.ListID })">@item.ListName</a>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="yc_news_right yc_pledge_right">
+                <div class="yc_car_right_body">
+                    <ul>
+                        @foreach (var news in Model.ServiceListInfo)
+                        {
+                            <li>
+                                <div class="yc_wed_container">
+                                    <div class="yc_car_body">
+                                        <div class="yc_wed_img">
+                                            @if (!string.IsNullOrEmpty(news.ImageUrl))
+                                            {
+                                                <a href="@Url.Action("CarServiceDetails", new { id = news.ListID })">
+                                                    <img src="@Url.Content(news.ImageUrl)" style="width:178px;height:138px;" /></a>
+                                            }
+                                            else
+                                            {
+                                                <a>此处无图片</a> 
+                                            }
+                                        </div>
+                                        <div class="yc_wed_content">
+                                            <div class="yc_car_content_title">
+                                                @Html.ActionLink(news.ListName, "CarServiceDetails", new { id = news.ListID })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="yc_about_clear">
+                    .</div>
+                <div class="pagination">
+                    @Html.PageLinks(Model.NewsInfo, x => Url.Action("Index", new { page = x }))
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

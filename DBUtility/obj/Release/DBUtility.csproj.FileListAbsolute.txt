@@ -1,0 +1,6 @@
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\bin\Release\YuanChen.DBUtility.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\bin\Release\IBatisNet.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\bin\Release\IBatisNet.DataMapper.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\bin\Release\MySql.Data.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+F:\VS2012\YuanChen\项目\MvcCarManagerment\DBUtility\obj\Release\YuanChen.DBUtility.dll

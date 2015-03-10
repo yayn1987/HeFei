@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MvcCarManagerment.Models.CustomerModel>
+@{
+    ViewBag.Title = "客户服务";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.info = "……";
+}
+<style type="text/css">
+    .table td
+    {
+        text-align: center;
+    }
+</style>
+<h2 class="page-title">
+    客户服务列表</h2>
+<div class="well">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="text-align: center">
+                    @Html.DisplayNameFor(model => model.SubJect)
+                </th>
+                <th style="text-align: center">
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th style="text-align: center">
+                    @Html.DisplayNameFor(model => model.Tel)
+                </th>
+                <th style="text-align: center">
+                    当前状态
+                </th>
+                <th style="text-align: center">
+                    @Html.DisplayNameFor(model => model.Time)
+                </th>
+                <th style="text-align: center">
+                    操作
+                </th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width: 30%">
+                    @if (item.SubJect.Length > 20)
+                    {
+                        @item.SubJect.Substring(0, 10)@ViewBag.info
+                    }
+                    else
+                    {
+                        @item.SubJect
+                    }
+                </td>
+                <td style="width: 10%">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td style="width: 20%">
+                    @Html.DisplayFor(modelItem => item.Tel)
+                </td>
+                @if (!item.IsRead)
+                {
+                    <td style="width: 10%; color: Red">
+                        @item.IsReadStatus
+                    </td>
+                }
+                else
+                {
+                    <td style="width: 10%">
+                        @item.IsReadStatus
+                    </td>
+                }
+                <td style="width: 20%">
+                    @item.FormatTime
+                </td>
+                <td style="width: 20%">
+                    @Html.ActionLink("查看", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("删除", "Delete", new { id = item.ID }, new { onclick="return confirm('确认删除该条记录吗？')" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

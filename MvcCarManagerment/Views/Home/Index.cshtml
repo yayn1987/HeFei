@@ -1,0 +1,102 @@
+﻿@model MvcCarManagerment.Models.IndexModel
+@{
+    ViewBag.Title = "主页";
+    var images = Model.Images.ToList();
+    var news = Model.News.ToList();
+    var service = Model.Service.ToList();
+    var content = string.Empty;
+}
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            @for (int i = 0; i < images.Count; i++)
+            {
+                if (string.IsNullOrEmpty(images[i].LinkUrl))
+                {
+                <li>
+                    <img src="@Url.Content(images[i].ImagerUrl)" id="wows1_@i" alt="@images[i].Title"/>
+                </li>
+                }
+                else
+                {
+                <li><a href="@images[i].LinkUrl" target="_blank">
+                    <img src="@Url.Content(images[i].ImagerUrl)" id="wows1_@i" alt="@images[i].Title"/>
+                </a></li>
+                }
+            }
+            @*            <li><img src="~/Content/index/38961106.jpg" id="wows1_0"/></li>
+            <li><img src="~/Content/index/57783106.jpg" id="wows1_1"/></li>
+            <li><img src="~/Content/index/66447106.jpg" id="wows1_2"/></li>
+            <li><img src="~/Content/index/93020106.jpg" id="wows1_3"/></li>
+            <li><img src="~/Content/index/html_5_wallpaper_by_bqrad382muo.jpg" id="wows1_4"/></li>*@
+        </ul>
+    </div>
+    <div class="ws_bullets">
+        <div>
+            @for (int i = 0; i < images.Count; i++)
+            {
+                <a href="#">@i</a>
+            }
+            @*<a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>*@
+        </div>
+    </div>
+</div>
+<div class="yc_bottom_container">
+    <div class="yc_bottom_news">
+        <div class="yc_bottom_news_title">
+            <p>
+                新闻动态/News</p>
+        </div>
+        <div class="yc_bottom_news_content">
+            <ul class="yc_bottom_news_ul">
+                @for (var n = 0; n < @news.Count; n++)
+                {
+                    <li><a href="@Url.Action("Detail", "News", new { id = news[n].ID })">@news[n].Title</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="yc_bottom_service">
+        <div class="yc_bottom_service_title">
+            <p>
+                服务范围/Service</p>
+        </div>
+        <div class="yc_bottom_service_content">
+            <ul class="yc_bottom_service_ul">
+                @for (int s = 0; s < service.Count; s++)
+                {
+                    <li><a href="@Url.Action("Index", service[s].Key)">@service[s].Value</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="yc_bottom_about">
+        <div class="yc_bottom_about_title">
+            <p>
+                关于远辰/About Us</p>
+        </div>
+        <div class="yc_bottom_about_content">
+            <span>
+                @if (Model.AboutUs.Coment.Length > 200)
+                {
+                    content = Model.AboutUs.Coment.Substring(0, 150) + "..."
+                        + Html.ActionLink("更多", "Index", "AboutUs");
+                }
+                else
+                {
+                    content = Model.AboutUs.Coment + Html.ActionLink("更多", "Index");
+                }
+                @Html.Raw(content)
+            </span>
+        </div>
+    </div>
+    <div class="yc_bottom_clear">
+        .</div>
+</div>
+<script type="text/javascript" src="~/Scripts/Slider/wowslider.js"></script>
+<script type="text/javascript" src="~/Scripts/Slider/script.js"></script>
+<link type="text/css" rel="stylesheet" href="~/Scripts/Slider/style.css" />

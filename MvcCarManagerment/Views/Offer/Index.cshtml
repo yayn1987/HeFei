@@ -1,0 +1,61 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.NewsListViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/news_title.png"/>
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index","Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                <a href="@Url.Action("Index","News")">新闻动态</a>
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("优惠活动","Index")
+            </div>
+        </div>
+        <div class="yc_news">
+            <div class="yc_news_left yc_offer_left">
+                <div class="yc_news_right_title">
+                    <a href="@Url.Action("Index","News")">新闻动态</a>
+                </div>
+                <div class="yc_news_right_child">
+                    <div class="yc_news_right_2">
+                        <i class="i_nomal">></i><a href="@Url.Action("Index","News")">公司动态</a>
+                    </div>
+                    <div class="yc_news_right_1">
+                        <i class="i_selected">></i>@Html.ActionLink("优惠活动","Index")
+                    </div>
+                </div>
+            </div>
+            <div class="yc_news_right yc_offer_right">
+                <div class="yc_offer_right_body">
+                    <ul>
+                        @foreach (var news in Model.News)
+                        {
+                            <li>
+                                <div class="yc_offer_container">
+                                    <div>
+                                        <a href="/Offer/Detail/@news.ID"><img src="@Url.Content(news.ImageUrl)" style="width:316px;height:200px;" /></a>
+                                    </div>
+                                    @Html.ActionLink(news.Title, "Detail", new { id = news.ID,@class="yc_detail_title"})
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                    <div class="yc_offer_clear">.</div>
+                </div>
+
+                <div class="pagination">
+                    @Html.PageLinks(Model.NewsInfo, x => Url.Action("Index", new { page = x }))
+                </div>
+            </div>
+            <div class="yc_about_clear">.</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\YuanChen.BLL.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\YuanChen.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\YuanChen.DAL.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\YuanChen.Model.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\OpenSmtp.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\COM.Excel.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\YuanChen.DBUtility.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\IBatisNet.DataMapper.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\IBatisNet.Common.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\bin\Release\MySql.Data.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+F:\VS2012\YuanChen\项目\MvcCarManagerment\BLL\obj\Release\YuanChen.BLL.dll

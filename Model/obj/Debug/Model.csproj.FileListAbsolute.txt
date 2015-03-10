@@ -1,0 +1,14 @@
+D:\yuanchen\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.dll
+D:\yuanchen\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.pdb
+D:\yuanchen\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.dll
+D:\yuanchen\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.pdb
+D:\yuanchen\MvcCarManagerment\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\yuanchen\ahyuanchen\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.dll
+D:\yuanchen\ahyuanchen\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.pdb
+D:\yuanchen\ahyuanchen\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.dll
+D:\yuanchen\ahyuanchen\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.pdb
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Model\bin\Debug\YuanChen.Model.pdb
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.dll
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Model\obj\Debug\YuanChen.Model.pdb
+F:\VS2012\YuanChen\项目\MvcCarManagerment\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,1626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01B3EC24-4E1B-4ACD-BC31-15593C9DE29F}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcCarManagerment</RootNamespace>
+    <AssemblyName>MvcCarManagerment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PrecompileBeforePublish>true</PrecompileBeforePublish>
+    <UseFixedNames>true</UseFixedNames>
+    <WDPMergeOption>CreateSeparateAssembly</WDPMergeOption>
+    <EnableUpdateable>true</EnableUpdateable>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\ValueInjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RazorGenerator.Mvc.2.2.3\lib\net40\RazorGenerator.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\BLL\BusinessService.cs" />
+    <Compile Include="Areas\Admin\BLL\CarOrderService.cs" />
+    <Compile Include="Areas\Admin\BLL\CarService.cs" />
+    <Compile Include="Areas\Admin\BLL\HandCarService.cs" />
+    <Compile Include="Areas\Admin\BLL\ImageService.cs" />
+    <Compile Include="Areas\Admin\BLL\NewsService.cs" />
+    <Compile Include="Areas\Admin\BLL\OfferService.cs" />
+    <Compile Include="Areas\Admin\BLL\PledgeService.cs" />
+    <Compile Include="Areas\Admin\BLL\WedService.cs" />
+    <Compile Include="Areas\Admin\Common\PicHandle.cs" />
+    <Compile Include="Areas\Admin\Common\ReducePic.cs" />
+    <Compile Include="Areas\Admin\Controllers\AboutManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BusinessManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CarOrderManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CarServiceManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CustomerManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HandCarManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ImageManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OfferManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PledgeManagerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\WedManagerController.cs" />
+    <Compile Include="Areas\Admin\HTMLHelpers\PagingHelpers.cs" />
+    <Compile Include="Areas\Admin\Models\ImagePage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Areas\Admin\Models\ImagesListViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\NewsInfo.cs" />
+    <Compile Include="Areas\Admin\Models\NewsListViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\NewsPage.cs" />
+    <Compile Include="Areas\Admin\Models\NewsServiceInfoPage.cs" />
+    <Compile Include="Areas\Admin\Models\NewsServiceManagerModel.cs" />
+    <Compile Include="Areas\Admin\Models\News_ServiceInfoListViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\ServerListListViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\ServerListModel.cs" />
+    <Compile Include="Areas\Admin\Models\ServerListPage.cs" />
+    <Compile Include="Areas\Admin\Views\AboutManager\EditAboutUs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditAboutUs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\AboutManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\BusinessManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\BusinessManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\BusinessManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarOrderManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarOrderManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarOrderManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\CreateType.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateType.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\Details.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Details.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\EditType.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditType.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CarServiceManager\IndexList.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndexList.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CustomerManager\Details.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Details.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\CustomerManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\HandCarManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\HandCarManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\HandCarManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ImageManager\AddImageManager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddImageManager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ImageManager\AdImageIndex.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdImageIndex.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ImageManager\ADIndex.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ADIndex.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ImageManager\EditImage.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditImage.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ImageManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ManagerMent\AboutUs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutUs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ManagerMent\EditAboutUs.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditAboutUs.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ManagerMent\ImageManager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageManager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\ManagerMent\Manager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\NewsManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\NewsManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\NewsManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\OfferManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\OfferManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\OfferManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\PledgeManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\PledgeManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\PledgeManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\Shared\NewsSummery.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsSummery.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\Shared\_ADImageIndex.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ADImageIndex.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\Shared\_LayoutAdmin.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LayoutAdmin.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\WedManager\Add.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\WedManager\Edit.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Edit.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Admin\Views\WedManager\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\BusinessController.cs" />
+    <Compile Include="Controllers\CarOrderController.cs" />
+    <Compile Include="Controllers\CarServiceController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\HandCarController.cs" />
+    <Compile Include="Controllers\LogionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagerMentController.cs" />
+    <Compile Include="Models\BusinessModel.cs" />
+    <Compile Include="Models\WedModel.cs" />
+    <Compile Include="Service\AboutService.cs" />
+    <Compile Include="Service\BusinessService.cs" />
+    <Compile Include="Service\CarOrderService.cs" />
+    <Compile Include="Service\CarService.cs" />
+    <Compile Include="Service\HandlerCarService.cs" />
+    <Compile Include="Service\ImageService.cs" />
+    <Compile Include="Service\NewsService.cs" />
+    <Compile Include="Service\OfferService.cs" />
+    <Compile Include="Service\PledgeService.cs" />
+    <Compile Include="Service\WedService.cs" />
+    <Compile Include="Service\YuanChenService.cs" />
+    <Compile Include="Views\AboutUs\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ExternalLoginConfirmation.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExternalLoginConfirmation.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\ExternalLoginFailure.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExternalLoginFailure.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Login.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Manage.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manage.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\Register.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Register.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\_ChangePasswordPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ChangePasswordPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\_ExternalLoginsListPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ExternalLoginsListPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\_RemoveExternalLoginsPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_RemoveExternalLoginsPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\_SetPasswordPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SetPasswordPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Business\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarOrder\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarOrder\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarService\CarServiceDetails.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarServiceDetails.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarService\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CarService\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Customer\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HandCar\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HandCar\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\About.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>About.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Contact.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contact.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logion\ModifyUser.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModifyUser.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logion\Register.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Register.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logion\UserLogion.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserLogion.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagerMent\Manager.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manager.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Offer\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Offer\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pledge\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pledge\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Error.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Error.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_LayLogion.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LayLogion.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_Layout.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Layout.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_LayoutBusiness.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LayoutBusiness.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_LayoutWed.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LayoutWed.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\_LoginPartial.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_LoginPartial.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wed\Detail.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Detail.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Wed\Index.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\_ViewStart.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_ViewStart.cshtml</DependentUpon>
+    </Compile>
+    <Content Include="Areas\Admin\bundles\bootstrap-tab.js" />
+    <Content Include="Areas\Admin\bundles\bootstrap-transition.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\Uploader.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagerMentController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\OfferController.cs" />
+    <Compile Include="Controllers\PledgeController.cs" />
+    <Compile Include="Controllers\WedController.cs" />
+    <Compile Include="Extention\ControllerExtension.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutUsModel.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\ImageModel.cs" />
+    <Compile Include="Models\IndexModel.cs" />
+    <Compile Include="Models\ManagerModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Basicinfo.cs" />
+    <None Include="Areas\Admin\Views\ImageManager\EditImage.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>EditImage.generated.cs</LastGenOutput>
+    </None>
+    <Content Include="Scripts\bootstrap.js" />
+    <None Include="Views\Logion\ModifyUser.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ModifyUser.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Wed\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Business\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarOrderManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarOrderManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\HandCarManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\HandCarManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CarOrder\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\HandCar\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Pledge\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\PledgeManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\PledgeManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\Details.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Details.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\IndexList.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>IndexList.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\CreateType.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>CreateType.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\EditType.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>EditType.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CarService\CarServiceDetails.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>CarServiceDetails.generated.cs</LastGenOutput>
+    </None>
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_CHS.txt" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceer40CN.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\README_CHS.txt" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40EN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceer40CN.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlcecompact40.dll" />
+    <None Include="_bin_deployableAssemblies\x86\sqlceca40.dll" />
+    <None Include="_bin_deployableAssemblies\zh-CN\System.Data.SqlServerCe.xml" />
+    <None Include="_bin_deployableAssemblies\zh-CHS\System.Data.SqlServerCe.resources.dll" />
+    <None Include="_bin_deployableAssemblies\System.Data.SqlServerCe.Entity\zh-CHS\System.Data.SqlServerCe.Entity.resources.dll" />
+    <None Include="_bin_deployableAssemblies\System.Data.SqlServerCe.Entity\System.Data.SqlServerCe.Entity.dll" />
+    <None Include="_bin_deployableAssemblies\System.Data.SqlServerCe.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Web.Mvc.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Web.Http.WebHost.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Web.Http.SelfHost.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Web.Http.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Net.Http.WebRequest.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Net.Http.resources.dll" />
+    <None Include="_bin_deployableAssemblies\zh-Hans\System.Net.Http.Formatting.resources.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.WebRequest.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.Formatting.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\bundles\bootstrap\bootstrap.js" />
+    <Content Include="Areas\Admin\bundles\bootstrap\bootstrap.min.js" />
+    <Content Include="Areas\Admin\bundles\graphDemo.js" />
+    <Content Include="Areas\Admin\bundles\jquery-1.8.1.min.js" />
+    <Content Include="Areas\Admin\bundles\jquery-1.8b1.js" />
+    <Content Include="Areas\Admin\bundles\jquery.jqplot.js" />
+    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Areas\Admin\Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Areas\Admin\Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Areas\Admin\Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\css\site.css" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="Areas\Admin\Content\font-awesome\docs\index.html" />
+    <Content Include="Areas\Admin\Content\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\Content\site.css" />
+    <Content Include="Areas\Admin\Content\theme.css" />
+    <Content Include="Areas\Admin\images\140x140.gif" />
+    <Content Include="Areas\Admin\images\170x170.gif" />
+    <Content Include="Areas\Admin\images\background.png" />
+    <Content Include="Areas\Admin\images\dust.png" />
+    <Content Include="Areas\Admin\images\furley_bg.png" />
+    <Content Include="Areas\Admin\images\middleman.png" />
+    <Content Include="Areas\Admin\images\subtle_surface.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\callbacks.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\attachment\fileTypeMaps.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\background\background.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\background\background.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\background\background.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\help\help.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\help\help.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\help\help.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\image.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\image.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\image.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\images\center_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\images\left_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\images\none_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\images\right_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\image\imageUploader.swf" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\internal.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\link\link.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\map\map.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\music\music.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\music\music.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\music\music.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\dragicon.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\edittable.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\edittable.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\edittable.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\edittd.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\table\edittip.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\tangram.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\config.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\template.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\template.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\template\template.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\video.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\video.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\video\video.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="Areas\Admin\Scripts\ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\en.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\addimage.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\background.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\button.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\copy.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\imglabel.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\localimage.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\music.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\en\images\upload.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\dialogbase.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\arrow.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\filescan.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\icons.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\icons.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\lock.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\scale.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\upload.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\word.gif" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="Areas\Admin\Scripts\ueditor\themes\iframe.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\fileprogress.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.cookies.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.proxy.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.queue.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.speed.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload.swf" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\swfupload\swfupload_fp9.swf" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Areas\Admin\Scripts\ueditor\ueditor.all.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\ueditor.all.min.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\ueditor.config.js" />
+    <Content Include="Areas\Admin\Scripts\ueditor\ueditor.parse.js" />
+    <Content Include="Content\images\body_b.png" />
+    <Content Include="Content\images\bus_header.png" />
+    <Content Include="Content\images\bus_title.png" />
+    <Content Include="Content\images\logo_b.png" />
+    <Content Include="Content\images\mainlevel_bg.png" />
+    <Content Include="Content\images\phone_b.png" />
+    <Content Include="Content\images\slide-panel_03.png" />
+    <Content Include="Content\images\slide-panel_10.png" />
+    <Content Include="Content\images\title_b.png" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\images\about_1.png" />
+    <Content Include="Content\images\about_2.png" />
+    <Content Include="Content\images\about_3.png" />
+    <Content Include="Content\images\about_title.png" />
+    <Content Include="Content\images\ad_w.png" />
+    <Content Include="Content\images\carserver.png" />
+    <Content Include="Content\images\con_title.png" />
+    <Content Include="Content\images\customerright.png" />
+    <Content Include="Content\images\home.png" />
+    <Content Include="Content\images\index_image.png" />
+    <Content Include="Content\images\list_arrow.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo_w.png" />
+    <Content Include="Content\images\news_title.png" />
+    <Content Include="Content\images\phone.png" />
+    <Content Include="Content\images\phone_w.png" />
+    <Content Include="Content\images\title_w.png" />
+    <Content Include="Content\images\web_header.png" />
+    <Content Include="Content\index\38961106.jpg" />
+    <Content Include="Content\index\57783106.jpg" />
+    <Content Include="Content\index\66447106.jpg" />
+    <Content Include="Content\index\93020106.jpg" />
+    <Content Include="Content\index\html_5_wallpaper_by_bqrad382muo.jpg" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\tooltips\103158-106.jpg" />
+    <Content Include="Content\tooltips\38961106.jpg" />
+    <Content Include="Content\tooltips\57783106.jpg" />
+    <Content Include="Content\tooltips\66447106.jpg" />
+    <Content Include="Content\tooltips\93020106.jpg" />
+    <Content Include="Content\tooltips\html_5_wallpaper_by_bqrad382muo.jpg" />
+    <Content Include="Content\yc_b_site.css" />
+    <Content Include="Content\yc_site.css" />
+    <Content Include="Content\yc_w_site.css" />
+    <Content Include="css\animate-custom.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\fonts\BebasNeue-webfont.svg" />
+    <Content Include="css\fonts\Dharma Type Font License.txt" />
+    <Content Include="css\fonts\fontomas-webfont.svg" />
+    <Content Include="css\fonts\franchise-bold-webfont.svg" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style2.css" />
+    <Content Include="css\style3.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\carserver.png" />
+    <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\MySlide.js" />
+    <Content Include="Scripts\slide.js" />
+    <Content Include="Scripts\Slider\script.js" />
+    <Content Include="Scripts\Slider\style.css" />
+    <Content Include="Scripts\Slider\style.mod.css" />
+    <Content Include="Scripts\Slider\wowslider.js" />
+    <Content Include="Scripts\Slider\wowslider.mod.js" />
+    <Content Include="UploadAdImage\AD2013-10-12-04-51-22-8639788login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-00-05-6474260login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-00-35-6874289logo.png" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-00-56-2892897logo.png" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-01-03-6892180logo.png" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-01-18-51108547_NB~4Z~1~OVSYTZ%257BY%257D003J.gif" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-10-56-87257987_NB~4Z~1~OVSYTZ%257BY%257D003J.gif" />
+    <Content Include="UploadAdImage\AD2013-10-12-05-11-07-5016576logo.png" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-20-28-8033036login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-20-47-3037168login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-21-48-6587901login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-23-26-5095576login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-23-46-0265903login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-23-47-7367288login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-25-20-7773179login001.jpg" />
+    <Content Include="UploadAdImage\AD2013-10-12-07-25-49-5014423login001.jpg" />
+    <Content Include="UploadAdImage\default.png" />
+    <Content Include="UploadImage\default.png" />
+    <None Include="Views\Home\About.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>About.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Home\Contact.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Contact.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Home\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <None Include="Views\_ViewStart.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ViewStart.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\_ChangePasswordPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ChangePasswordPartial.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\_ExternalLoginsListPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ExternalLoginsListPartial.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\_RemoveExternalLoginsPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_RemoveExternalLoginsPartial.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\_SetPasswordPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_SetPasswordPartial.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\Login.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Login.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\Manage.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Manage.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\Register.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Register.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\ExternalLoginFailure.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ExternalLoginFailure.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Account\ExternalLoginConfirmation.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ExternalLoginConfirmation.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Shared\Error.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Error.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Shared\_LoginPartial.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LoginPartial.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Shared\_Layout.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_Layout.generated.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Scripts\ueditor\net\upload1\" />
+    <Folder Include="Areas\Admin\Scripts\ueditor\net\upload\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\ManagerMent\Manager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Manager.generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\ManagerMent\Manager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Manager.generated.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Areas\Admin\Content\font-awesome\.gitignore" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\font-awesome.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\font-site.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\mixins.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\site.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <None Include="Areas\Admin\Content\font-awesome\docs\assets\less\variables.less" />
+    <None Include="Areas\Admin\Content\font-awesome\FontAwesome-Vectors.pdf" />
+    <None Include="Areas\Admin\Content\font-awesome\FontAwesome.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\font\fontawesome-webfont.eot" />
+    <None Include="Areas\Admin\Content\font-awesome\font\fontawesome-webfont.ttf" />
+    <None Include="Areas\Admin\Content\font-awesome\font\fontawesome-webfont.woff" />
+    <None Include="Areas\Admin\Content\font-awesome\less\font-awesome-ie7.less" />
+    <None Include="Areas\Admin\Content\font-awesome\less\font-awesome.less" />
+    <None Include="Areas\Admin\Content\font-awesome\README.md" />
+    <None Include="Areas\Admin\Content\font-awesome\sass\font-awesome.sass" />
+    <None Include="Areas\Admin\Content\font-awesome\sass\font-awesome.scss" />
+    <None Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LayoutAdmin.generated.cs</LastGenOutput>
+    </None>
+    <Content Include="Areas\Admin\Scripts\ueditor\net\fileUp.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\getContent.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\getMovie.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\getRemoteImage.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\imageManager.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\imageUp.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\scrawlUp.ashx" />
+    <Content Include="Areas\Admin\Scripts\ueditor\net\Web.config" />
+    <None Include="Areas\Admin\images\Thumbs.db" />
+    <None Include="Areas\Admin\Views\ManagerMent\ImageManager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ImageManager.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ManagerMent\AboutUs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>AboutUs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ManagerMent\EditAboutUs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>EditAboutUs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Logion\UserLogion.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>UserLogion.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Logion\Register.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Register.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\AboutManager\EditAboutUs.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>EditAboutUs.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\AboutManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\BusinessManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarOrderManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\HandCarManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\NewsManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\NewsManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\NewsManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\PledgeManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\OfferManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\Shared\NewsSummery.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>NewsSummery.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\WedManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\BusinessManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\BusinessManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CarServiceManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\OfferManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\OfferManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ImageManager\AddImageManager.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>AddImageManager.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ImageManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ImageManager\ADIndex.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>ADIndex.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\Shared\_ADImageIndex.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_ADImageIndex.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\WedManager\Add.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Add.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\WedManager\Edit.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Edit.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\AboutUs\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Business\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CarOrder\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CarService\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\HandCar\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\News\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Offer\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Pledge\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Wed\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\ImageManager\AdImageIndex.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>AdImageIndex.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Areas\Admin\Views\CustomerManager\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Areas\Admin\Views\CustomerManager\Details.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Details.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\News\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Offer\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Shared\_LayoutWed.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LayoutWed.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Shared\_LayoutBusiness.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LayoutBusiness.generated.cs</LastGenOutput>
+    </None>
+    <None Include="css\fonts\BebasNeue-webfont.eot" />
+    <None Include="css\fonts\BebasNeue-webfont.ttf" />
+    <None Include="css\fonts\BebasNeue-webfont.woff" />
+    <None Include="css\fonts\fontomas-webfont.eot" />
+    <None Include="css\fonts\fontomas-webfont.ttf" />
+    <None Include="css\fonts\fontomas-webfont.woff" />
+    <None Include="css\fonts\franchise-bold-webfont.eot" />
+    <None Include="css\fonts\franchise-bold-webfont.ttf" />
+    <None Include="css\fonts\franchise-bold-webfont.woff" />
+    <None Include="Views\Shared\_LayLogion.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>_LayLogion.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\CarService\Detail.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Detail.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Views\Customer\Index.cshtml">
+      <Generator>RazorGenerator</Generator>
+      <LastGenOutput>Index.generated.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\PublishProfiles\yuan.pubxml" />
+    <Content Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <Content Include="_bin_deployableAssemblies\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10242</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

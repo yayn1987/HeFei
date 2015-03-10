@@ -1,0 +1,16 @@
+﻿@model MvcCarManagerment.Models.ManagerModel
+@using MvcCarManagerment.Service
+@{
+    ViewBag.Title = "后台信息发布";
+}
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(entity => entity.Title)
+            </td>
+            <td>@Html.DropDownListFor(entity => entity.Title, new SelectList(Basicinfo.GeTypeList(), "ID", "Name"))
+            </td>
+        </tr>
+    </table>
+}

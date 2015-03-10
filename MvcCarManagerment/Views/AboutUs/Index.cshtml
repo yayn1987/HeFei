@@ -1,0 +1,37 @@
+﻿@model YuanChen.Model.AboutUsTable
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="yc_container">
+    <div class="yc_about_title">
+        <img src="~/Content/images/about_title.png"/>
+    </div>
+    <div class="yc_about_content">
+        <div class="yc_about_content_nav">
+            <div class="yc_about_content_home">
+                <img src="~/Content/images/home.png" class="yc_about_home_img" /><i class="yc_about_current">当前位置：</i>
+                <a href="@Url.Action("Index","Home")">首页</a>
+                <img src="~/Content/images/list_arrow.png" />
+                @Html.ActionLink("关于我们","Index")
+            </div>
+        </div>
+        <div class="yc_about_content_cont">
+            <div class="yc_about_content_right">
+                <ul>
+                    <li><img src="~/Content/images/about_1.png" /></li>
+                    <li><img src="~/Content/images/about_2.png" /></li>
+                    <li><img src="~/Content/images/about_3.png" /></li>
+                </ul>
+            </div>
+            <div class="yc_about_content_left">
+                <div class="yc_about_content_header"><p>关于远辰/About Us</p></div>
+                <div class="yc_about_content_body">
+                    @Html.DisplayTextFor(t => t.Coment)
+                </div>
+            </div>
+            <div class="yc_about_clear">.</div>
+        </div>
+    </div>
+</div>

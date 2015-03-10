@@ -1,0 +1,42 @@
+﻿@model MvcCarManagerment.Areas.Admin.Models.ServerListModel
+@{
+    ViewBag.Title = "创建类别";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>
+    创建服务类别</h2>
+@using (Html.BeginForm("CreateType", "CarServiceManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td width="25%" align="center" valign="middle">
+                @Html.LabelFor(entity => entity.ListName)
+            </td>
+            <td>
+                @Html.TextBoxFor(entity => entity.ListName)
+                <span style="color: Red;">*</span>
+                @Html.ValidationMessageFor(entity => entity.ListName)
+            </td>
+        </tr>
+        <tr>
+            <td width="25%" align="center" valign="middle">
+                图片路径
+            </td>
+            <td>
+                <input type="file" id="fileName" name="fileName" style="width: 300px;" />
+                &nbsp; <span style="color: Red; line-height: 27px; height: 27px;">添加图片</span>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <input type="submit" value="保存" class="btn btn_edit_submit" />
+    </p>
+
+}
+<div>
+    @Html.ActionLink("返回主界面", "IndexList")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

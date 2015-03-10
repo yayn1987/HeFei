@@ -1,0 +1,121 @@
+﻿/* CSS Document */
+ul, li {
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+.clear {
+    clear: both;
+    *display: inline; /*IE only*/
+}
+
+/*menu*/
+#nav {
+    margin: 0 auto 40px;
+    width: 825px;
+    display: block;
+}
+
+    #nav .jquery_out {
+        float: left;
+        line-height: 32px;
+        display: block;
+        border-right: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+        font: 18px/32px "微软雅黑";
+        background: #062723 url(../images/slide-panel_03.png) 0 0 repeat-x;
+    }
+
+        #nav .jquery_out .smile {
+            padding-left: 1em;
+        }
+
+    #nav .jquery_inner {
+        margin-left: 16px;
+    }
+
+    #nav .jquery {
+        margin-right: 1px;
+        padding: 0 2em;
+    }
+
+    #nav .mainlevel {
+        background: #111e26;
+        float: left;
+        border-right: 0px solid #fff;
+        width: 165px; /*IE6 only*/
+    }
+
+        #nav .mainlevel a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 32px;
+            display: block;
+            padding: 0 10px;
+            width: 145px;
+        }
+
+            #nav .mainlevel a:hover {
+                color: #fff;
+                text-decoration: none;
+                background: #111e26 url(../images/slide-panel_03.png) 0 0 repeat-x;
+            }
+
+        #nav .mainlevel ul {
+            display: none;
+            position: absolute;
+        }
+
+        #nav .mainlevel li {
+            border-top: 1px solid #fff;
+            background: #111e26;
+            width: 165px; /*IE6 only*/
+        }
+
+.log {
+    text-align: center;
+    color: skyblue;
+    line-height: 24px;
+    text-transform: capitalize;
+    margin: 0px auto;
+}
+
+.b1 {
+    font-family: "微软雅黑";
+    font-size: 23px;
+    color: #000000;
+}
+
+.b2 {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    color: #5b5b5b;
+    line-height: 28px;
+}
+
+.b3 {
+    font-family: "微软雅黑";
+    font-size: 18px;
+    line-height: 38px;
+    color: #5b5b5b;
+}
+
+
+.b4 {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.b5 {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.b6 {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #949494;
+}

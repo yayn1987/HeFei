@@ -1,22 +1,22 @@
 ﻿html, body
 {
-    background: #0E0E0E;
+    background: #EEEEEE;
     border: 0;
     margin: 0;
     padding: 0;
 }
 
     .YC_global_nav{
-        background-color:#1D1D1D;
-        color:#999;
-        height: 74px;
+        background-color:#ccc;
+        color:#333;
+        height: 35px;
         top:0px;
         left: 0;
         width: 100%;
         /*margin-top: 32px;*/
-        -webkit-box-shadow:0px 10px 10px #000;
+        /*-webkit-box-shadow:0px 10px 10px #000;
         -moz-box-shadow:0px 10px 10px #000;
-        box-shadow: 0px 10px 10px #000;
+        box-shadow: 0px 10px 10px #000;*/
     }
 
 div.yc_global_header {
@@ -64,9 +64,14 @@ div.yc_global_header {
     position: relative;
 }
 
+div.yc_title a:hover {
+    background-color:#A1101A;
+    color:#FFF;
+}
+
 .YC_global_nav .yc_title .yc_tab
 {
-    color: #999;
+    color: #333;
     display: inline-block;
     line-height: 16px;
     cursor: pointer;
@@ -77,7 +82,7 @@ div.yc_global_header {
 .YC_global_nav .yc_title .yc_tab i
 {
     display: inline-block;
-    padding: 29px 28px 29px 28px;
+    padding: 10px 28px;
 }
 
 .YC_global_nav .yc_title .first_tab i

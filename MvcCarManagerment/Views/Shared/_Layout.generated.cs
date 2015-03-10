@@ -52,11 +52,11 @@ WriteLiteral(" />\r\n    <meta");
 
 WriteLiteral(" charset=\"utf-8\"");
 
-WriteLiteral(" />\r\n    <title>远辰汽车服务有限公司</title>\r\n    <link");
+WriteLiteral(" />\r\n    <title>合肥市书画院</title>\r\n    <link");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 188), Tuple.Create("\"", 208)
-, Tuple.Create(Tuple.Create("", 195), Tuple.Create<System.Object, System.Int32>(Href("~/favicon.ico")
-, 195), false)
+WriteAttribute("href", Tuple.Create(" href=\"", 184), Tuple.Create("\"", 204)
+, Tuple.Create(Tuple.Create("", 191), Tuple.Create<System.Object, System.Int32>(Href("~/favicon.ico")
+, 191), false)
 );
 
 WriteLiteral(" rel=\"shortcut icon\"");
@@ -160,7 +160,7 @@ WriteLiteral(">\r\n        <a");
 
 WriteLiteral(" href=\"#\"");
 
-WriteLiteral(">远辰微博</a> | <a");
+WriteLiteral(">书画院微博</a> | <a");
 
 WriteLiteral(" href=\"/Logion/\"");
 
@@ -177,17 +177,6 @@ WriteLiteral(">\r\n            <div");
 WriteLiteral(" class=\"yc_header\"");
 
 WriteLiteral(">\r\n                <div");
-
-WriteLiteral(" class=\"yc_logo\"");
-
-WriteLiteral(">\r\n                    <img");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 1285), Tuple.Create("\"", 1316)
-, Tuple.Create(Tuple.Create("", 1291), Tuple.Create<System.Object, System.Int32>(Href("~/Content/images/logo.png")
-, 1291), false)
-);
-
-WriteLiteral(" />\r\n                </div>\r\n                <div");
 
 WriteLiteral(" class=\"yc_nav\"");
 
@@ -207,11 +196,94 @@ WriteLiteral(" class=\"yc_title current\"");
 
 WriteLiteral(">\r\n                        <a");
 
-WriteLiteral(" href=\"/AboutUs/Index\"");
+WriteLiteral(" href=\"/Wed/Index\"");
 
 WriteLiteral(" class=\"yc_tab\"");
 
-WriteLiteral("><i>关于我们</i></a>\r\n                    </div>\r\n                    <div");
+WriteLiteral(" id=\"yc_select_gaikuang\"");
+
+WriteLiteral(" onmouseover=\"mopen(\'yc_slide_my\')\"");
+
+WriteLiteral(" onmouseout=\"mclosetime()\"");
+
+WriteLiteral("><i>概况</i></a>\r\n                        <div");
+
+WriteLiteral(" id=\"yc_slide_gaikuang\"");
+
+WriteLiteral(" onmouseover=\"mcancelclosetime()\"");
+
+WriteLiteral(" onmouseout=\"mclosetime()\"");
+
+WriteLiteral(" style=\"z-index:1000\"");
+
+WriteLiteral(">\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 35 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("高端婚庆策划","Index", "Wed"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 36 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("高端商务礼仪","Index", "Business"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 37 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("高端汽车服务","Index", "CarService"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 38 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("车辆订购、按揭","Index", "CarOrder"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 39 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("车辆抵押","Index", "Pledge"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+WriteLiteral("                            ");
+
+            
+            #line 40 "..\..\Views\Shared\_Layout.cshtml"
+                       Write(Html.ActionLink("二手车交易、评估","Index", "HandCar"));
+
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n                        </div>\r\n                    </div>\r\n                   " +
+" <div");
 
 WriteLiteral(" class=\"yc_title current\"");
 
@@ -262,7 +334,7 @@ WriteLiteral(">\r\n");
 WriteLiteral("                            ");
 
             
-            #line 47 "..\..\Views\Shared\_Layout.cshtml"
+            #line 52 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("高端婚庆策划","Index", "Wed"));
 
             
@@ -273,7 +345,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                            ");
 
             
-            #line 48 "..\..\Views\Shared\_Layout.cshtml"
+            #line 53 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("高端商务礼仪","Index", "Business"));
 
             
@@ -284,7 +356,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                            ");
 
             
-            #line 49 "..\..\Views\Shared\_Layout.cshtml"
+            #line 54 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("高端汽车服务","Index", "CarService"));
 
             
@@ -295,7 +367,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                            ");
 
             
-            #line 50 "..\..\Views\Shared\_Layout.cshtml"
+            #line 55 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("车辆订购、按揭","Index", "CarOrder"));
 
             
@@ -306,7 +378,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                            ");
 
             
-            #line 51 "..\..\Views\Shared\_Layout.cshtml"
+            #line 56 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("车辆抵押","Index", "Pledge"));
 
             
@@ -317,7 +389,7 @@ WriteLiteral("\r\n");
 WriteLiteral("                            ");
 
             
-            #line 52 "..\..\Views\Shared\_Layout.cshtml"
+            #line 57 "..\..\Views\Shared\_Layout.cshtml"
                        Write(Html.ActionLink("二手车交易、评估","Index", "HandCar"));
 
             
@@ -330,6 +402,16 @@ WriteLiteral(" class=\"yc_title current\"");
 
 WriteLiteral(">\r\n                        <a");
 
+WriteLiteral(" href=\"/AboutUs/Index\"");
+
+WriteLiteral(" class=\"yc_tab\"");
+
+WriteLiteral("><i>关于我们</i></a>\r\n                    </div>\r\n                    <div");
+
+WriteLiteral(" class=\"yc_title current\"");
+
+WriteLiteral(">\r\n                        <a");
+
 WriteLiteral(" href=\"/Customer/Index\"");
 
 WriteLiteral(" class=\"yc_tab last_tab\"");
@@ -337,38 +419,20 @@ WriteLiteral(" class=\"yc_tab last_tab\"");
 WriteLiteral("><i>客户服务</i></a>\r\n                    </div>\r\n                </div>\r\n           " +
 "     <div");
 
-WriteLiteral(" class=\"yc_phone\"");
-
-WriteLiteral(">\r\n                    <div");
-
-WriteLiteral(" class=\"yc_phone_num\"");
-
-WriteLiteral(">\r\n                        <i>400-551-9999</i>\r\n                    </div>\r\n     " +
-"               <div");
-
-WriteLiteral(" class=\"yc_phone_icon\"");
-
-WriteLiteral(">\r\n                        <img");
-
-WriteAttribute("src", Tuple.Create(" src=\"", 3305), Tuple.Create("\"", 3337)
-, Tuple.Create(Tuple.Create("", 3311), Tuple.Create<System.Object, System.Int32>(Href("~/Content/images/phone.png")
-, 3311), false)
-);
-
-WriteLiteral("/>\r\n                    </div>\r\n                </div>\r\n               ");
-
-WriteLiteral("\r\n                <div");
-
 WriteLiteral(" class=\"yc_clear\"");
 
-WriteLiteral(">.</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div>\r\n        ");
+WriteLiteral(">.</div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div");
+
+WriteLiteral(" style=\"margin-top:10px\"");
+
+WriteLiteral(">\r\n        ");
 
 WriteLiteral("\r\n");
 
 WriteLiteral("        ");
 
             
-            #line 110 "..\..\Views\Shared\_Layout.cshtml"
+            #line 74 "..\..\Views\Shared\_Layout.cshtml"
    Write(RenderBody());
 
             
@@ -378,25 +442,17 @@ WriteLiteral("\r\n    </div>\r\n    <footer>\r\n            <div");
 
 WriteLiteral(" class=\"\"");
 
-WriteLiteral(">Copyright© 2013 Ahyuanchen.com All Rights reserverd   版权所有    安徽远辰汽车服务有限公司    地址" +
-"：合肥市黄山路汇峰大厦1212室</div>\r\n            <div");
+WriteLiteral(">Copyright© 2015 hfsshy.com All Rights reserverd   合肥市书画院   地址：合肥市淮河路与阜阳路交口北20米</" +
+"div>\r\n            <div");
 
 WriteLiteral(" class=\"\"");
 
-WriteLiteral(">建议使用1024*768以上的屏幕分辨率和6.0以上版本的IE来访问本站</div>\r\n            <div");
-
-WriteLiteral(" class=\"\"");
-
-WriteLiteral(">客服电话: 400-511-99999   传真:0551-688888888</div>\r\n            <div");
-
-WriteLiteral(" class=\"\"");
-
-WriteLiteral(">备案号：皖ICP备10020997号</div>\r\n    </footer>\r\n");
+WriteLiteral(">建议使用1024*768以上的屏幕分辨率和6.0以上版本的IE来访问本站</div>\r\n    </footer>\r\n");
 
 WriteLiteral("    ");
 
             
-            #line 118 "..\..\Views\Shared\_Layout.cshtml"
+            #line 80 "..\..\Views\Shared\_Layout.cshtml"
 Write(Scripts.Render("~/Scripts/MySlide.js"));
 
             
@@ -407,7 +463,7 @@ WriteLiteral("\r\n");
 WriteLiteral("    ");
 
             
-            #line 119 "..\..\Views\Shared\_Layout.cshtml"
+            #line 81 "..\..\Views\Shared\_Layout.cshtml"
 Write(Scripts.Render("~/bundles/jquery"));
 
             
@@ -418,7 +474,7 @@ WriteLiteral("\r\n");
 WriteLiteral("    ");
 
             
-            #line 120 "..\..\Views\Shared\_Layout.cshtml"
+            #line 82 "..\..\Views\Shared\_Layout.cshtml"
 Write(RenderSection("scripts", required: false));
 
             
